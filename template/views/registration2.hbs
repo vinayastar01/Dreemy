@@ -12,43 +12,42 @@
   </head>
   <body>
     
- 
 </div>
     <div class="container mt-5 shadow-IG p-5" style="width: 35%">
-        <h2 class="text-center"> Join as a Companies or Organiser </h2>
-        <p id="msg" style="background-color: brown; color:aliceblue"> </p>
-    
-  <input type="radio" id="register2" name="register" value="Register as a Organiser  ">
-  <label for="html"></label>Register as a Organiser<br>
-  <input type="radio" id="register1" name="register" value="Register as a Company">
-  <label for="css">Register as a Company</label><br>
-
-   
-     <button onClick="myonClickFn()">Submit</button>
-     <script>
-      function myonClickFn(){
-        var ele = document.getElementsByName('register');
-          
-        ele.forEach(function (e)  {
-            if(e.checked){
-            if(e.value=="Register as a Organiser  "){
-              document.location.href="registration2";}
-            
-            if(e.value=="Register as a Company"){
-            document.location.href="registration1";}
-            
-            
-            }
-        });
-        document.getElementById("msg").innerHTML="Please select one option";
-        {{!-- setTimeout(20000);
-        document.getElementById("msg").innerHTML=""; --}}
-      }
-     </script>
-   
-  
+        <h2 class="text-center"> Join as Organiser </h2>
+        <form action="/empdata" method="POST">
+            <div class="register">
 
            
+                <label> Username :</label>
+                <br>
+                <input type="text" name="name"
+                id="name" placeholder="Enter Your Name">
+                <br><br>
+                <label>Email adress:</label>
+                <br>
+                <input type="email" name="email"
+                id="name" placeholder="Enter Your Valid Email">
+                <br><br>
+                <label>Password</label>
+                <br>
+                <input type="password" name="password"
+                id="name" placeholder="Set Password">
+                <br><br>
+                <label> Confirm Password</label>
+                <br>
+                <input type="password" name="cpassword"
+                id="name" placeholder="Set Password">
+                <br><br>
+                <div class="Horizontal-center">
+                   
+                </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+             <!--submit button-->
+<div class = "text-center">
+  <p>Already have an account? <a href="/login">Login</a></p>
+</div>
+          </form>
 
     </div>
 
