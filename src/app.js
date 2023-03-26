@@ -9,6 +9,7 @@ const path = require("path");
 const empCollection = require("./model/model");
 const { listeners } = require("process");
 const { equal } = require("assert");
+const { response } = require("express");
 
 const temp_path = path.join(__dirname, "../template/views");
 require("./mdb/mdb");
@@ -26,6 +27,9 @@ app.get("/registration2", (req, res) => {
   res.render("registration2");
 });
 
+app.get("/home", (req, res) => {
+  res.render("home");
+});
 
 
 app.post("/empdata", async (req, res) => {
@@ -38,10 +42,11 @@ app.post("/empdata", async (req, res) => {
         email:req.body.email,
         password:req.body.password,
         cpassword:req.body.cpassword,
+        usertype:req.body.type,
       });
   
       const postData = await empData.save();
-      res.send(postData);
+      res.redirect("/login");
     }else
     {
       res.send("password are not matching");
@@ -51,22 +56,28 @@ app.post("/empdata", async (req, res) => {
   }
 })
 
-app.get("/login",(req, res) => {
+app.get("/login",(req,res) => {
   res.render("login");
 });
-app.post('/login',async(req,res)=>{
+app.post("/login",async(req,res)=>{
   try{
     const email = req.body.email;
-    const password = req.body.loginpassword;
+    const password = req.body.password;
 
-    const getEmail= await empCollection.findOne({email: email });
-    if(getEmail.password===password){
-      res.render('index');
-    }else{
+    const getEmail= await empCollection.findOne({email: email});
+    if(getEmail == null){
+      res.send("this email is not registered")
+    }
+    
+     if(getEmail.password===password)
+     {
+      res.render('home');
+    }
+    else{
       res.send('password are not matching...');
     }
   }catch(error){
-    res.send(error);
+    console.log(error);
   }
 });
 

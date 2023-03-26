@@ -14,6 +14,10 @@ const empSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    usertype:{
+        type:String,
+        required:true
+    },
     cpassword:{
         type:String,
         required:true
