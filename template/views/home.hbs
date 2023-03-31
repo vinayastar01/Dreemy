@@ -3,9 +3,338 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="style1.css">
+    
+    <style>
+      /* CSS */
+.top{
+
+    margin:0;
+    padding:0;
+    border:2px solid rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    margin:auto;
+    /* padding:15px; */
+    display:flex;
+
+}
+
+.logo{
+    /* border: 2px solid red; */
+    padding-block: 20px;
+    display: inline-block;
+    width:120px;
+    padding-left: 20px;
+    text-align: center;
+    color:rgb(21, 255, 0);
+    font-size: larger;
+    font-weight: 400;
+    font-size: 1.5vmax;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+ }
+ .logobox:hover{
+    color:rgb(255, 255, 255) ;
+ }
+.navbox{
+    /* border:2px solid burlywood; */
+    margin:0px;
+    padding-block: 20px;
+    display: inline-block;
+     width:600px;
+     position: absolute;  
+     right: 20px; 
+     /* display: inline-block;
+      */
+      border-bottom: 3px;
+}
+
+
+.navbox>a{
+    color:rgb(247, 2, 2);
+    padding:20px;
+    font-size: larger;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 1.5vmax;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbox>a:hover{
+    color:green;
+}
+
+
+.v1{
+    display:inline-block;
+    position:absolute;
+    right:30px;
+    padding:5px;
+    font-size: 1.5vmax;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.v1>a{
+    color:white;
+    padding:10px;
+    font-size: larger;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 1.5vmax;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.v1>a:hover{
+    color:green;
+}
+section.home{
+    /* border:2px solid blue; */
+    height:90vh;
+    background: linear-gradient(to right,rgb(175, 169, 169),rgb(62, 62, 112));
+    display:flex;
+
+}
+.container{
+    /* height:100%; */
+    width:100%;
+    /* border:1px solid red; */
+    display:flex;
+}
+#rightcontainer{
+    /* border:1px solid red; */
+    display:flex;
+    justify-content: flex-end;
+
+}
+#rightcontainer>img{
+    margin-right: 7vh;
+    filter: drop-shadow(0 0 20px rgb(58, 57, 57));
+    
+}
+div#leftcontainer{
+    /* border:1px solid red; */
+    display: flex;
+    flex-direction: column;
+    padding: 5vmax;
+    box-sizing: border-box;
+    justify-content: center;
+
+
+}
+#leftcontainer>h1{
+    font-size: 5vmax;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* border:1px solid red; */
+}
+#leftcontainer>h2{
+    font-size: 2vmax;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* border:1px solid red; */
+    margin-top: -5%;
+}
+#leftcontainer>p{
+    font-size: 1vmax;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* border:1px solid red; */
+    margin-left: 4%;
+   
+}
+#leftcontainer>button{
+    width:10vmax;
+    padding: 0.8vmax; 
+    border: 1px solid red;
+    border-radius: 2vmax;
+    background-color: brown;
+    color:black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2vmax;
+    margin-left: 4%;
+    cursor: pointer;
+}
+#leftcontainer>button:hover{
+    /* border-bottom: blue; */
+    color:aqua;
+}
+/* for Footer*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+
+
+
+
+
+    </style>
   </head>
   <body>
-    <h1>You are loged in</h1>
+    <div className="top">
+
+<div class="logo">MAtrix</div>
+    <div class="navbox">
+        <a href=""> EVENT </a>
+        <a href=""> SPONSORS </a>
+        <a href=""> CONNECTION </a>
+        <a href="">ABOUT</a>
+    <div class="v1">
+        <a href="/login"> Login </a>
+        <a href="/registration1"> Sign up </a>
+    </div>
+    </div>
+
+    </div>
+ <section class="home">
+        <div class="container" id="leftcontainer">
+            <h1>Collaborate</h1>
+            <h2>With Brands!</h2>
+            <p>Connect with right person,Don't wait ,Collaborate with Brands</p>
+            <br></br>
+            <button>Explore Now →</button>
+           <br></br>
+      <button onClick="myonClickFn()">Register your Event!</button>
+      <script>
+      function myonClickFn(){
+        var ele = document.getElementsByName('event');
+          
+        ele.forEach(function (e)  {
+            
+           
+            document.location.href"event";
+            
+            
+            
+        });
+       
+      }
+     </script>
+   
+
+        </div>
+        <div class="container" id="rightcontainer">
+            <img src="./image1e/home.png" alt="">
+        </div>
+    </section>
+    <!--Footer design-->
+    <footer class="footer">
+  	 <div class="container">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4>company</h4>
+  	 			<ul>
+  	 				<li><a href="#">about us</a></li>
+  	 				<li><a href="#">our services</a></li>
+  	 				<li><a href="#">privacy policy</a></li>
+  	 				
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>get help</h4>
+  	 			<ul>
+  	 				<li><a href="#">FAQ</a></li>
+  	 				<li><a href="#">payment options</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		
+  	 		<div class="footer-col">
+  	 			<h4>follow us</h4>
+  	 			<div class="social-links">
+  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="#"><i class="fab fa-twitter"></i></a>
+  	 				<a href="#"><i class="fab fa-instagram"></i></a>
+  	 				<a href="#"><i class="fab fa-linkedin-in"></i></a>
+  	 			</div>
+  	 		</div>
+  	 	</div>
+  	 </div>
+  </footer>
   </body>
 </html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event Registration Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+     
+    </style>
+  </head>
+  <body>
+    <div class="testbox">
+      <form action="/">
+        <div class="banner">
+          <h1>Event registration form</h1>
+        </div>
+        <div class="item">
+          <p>Event name</p>
+          <input type="text" name="name"/>
+        </div>
+        <div class="item">
+          <p>Date of Event</p>
+          <input type="date" name="bdate" />
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+       
+        
+        <div class="item">
+          <p>Description of Event</p>
+          <textarea rows="3" ></textarea>
+        </div>
+        
+        <div class="item">
+          <p>College Name</p>
+          <input type="text" name="name"/>
+        </div>
+        <div class="item">
+          <p>College Adress</p>
+          <input type="text" name="name" placeholder="Street address" />
+          <input type="text" name="name" placeholder="Street address line 2" />
+          <div class="city-item">
+            <input type="text" name="name" placeholder="City" />
+            <input type="text" name="name" placeholder="Region" />
+            <input type="text" name="name" placeholder="Postal / Zip code" />
+            <select>
+              <option value="">Country</option>
+              <option value="1">India</option>
+              <option value="2">Germany</option>
+              <option value="3">France</option>
+              <option value="4">Armenia</option>
+              <option value="5">USA</option>
+            </select>
+          </div>
+        </div>
+        <div class="item">
+          <p>Footfaall</p>
+           <select>
+            <option value=""></option>
+            <option value="1">*Please select*</option>
+            <option value="2">5000</option>
+             <option value="2">10000</option>
+             <option value="2">20000</option>
+              <option value="2">50000</option>
+               <option value="2"> >50000</option>
+          </select>
+        </div>
+        
+        <div class="item">
+          <p>Type of Event</p>
+          <select>
+            <option value=""></option>
+            <option value="1">*Please select*</option>
+            <option value="2">Cultural</option>
+            <option value="3">Technical</option>
+          </select>
+        </div>
+        
+        
+        </div>
+        <div class="item">
+          <p>Contact Email</p>
+          <input type="text" name="name"/>
+        </div>
+        <div class="item">
+          <p>Contact Number</p>
+          <input type="text" name="name"/>
+        </div>
+        <div class="question">
+          <p>Will this event be recorded?</p>
+          <div class="question-answer">
+            <div>
+              <input type="radio" value="none" id="radio_1" name="recorded" />
+              <label for="radio_1" class="radio"><span>Yes</span></label>
+            </div>
+            <div>
+              <input type="radio" value="none" id="radio_2" name="recorded" />
+              <label for="radio_2" class="radio"><span>No</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="btn-block">
+          <button type="submit" href="/">Register</button>
+         
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

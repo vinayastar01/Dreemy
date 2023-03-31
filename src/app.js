@@ -7,6 +7,9 @@ connectDB();
 
 const path = require("path");
 const empCollection = require("./model/model");
+const event = require("./model/model");
+
+
 const { listeners } = require("process");
 const { equal } = require("assert");
 const { response } = require("express");
@@ -18,7 +21,7 @@ app.set("views", temp_path);
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("home");
 });
 app.get("/registration1", (req, res) => {
   res.render("registration1");
@@ -26,11 +29,13 @@ app.get("/registration1", (req, res) => {
 app.get("/registration2", (req, res) => {
   res.render("registration2");
 });
+app.get("/event", (req, res) => {
+  res.render("event");
+});
 
 app.get("/home", (req, res) => {
   res.render("home");
 });
-
 
 app.post("/empdata", async (req, res) => {
   try{
