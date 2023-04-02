@@ -7,7 +7,8 @@ connectDB();
 
 const path = require("path");
 const empCollection = require("./model/model");
-const event = require("./model/model");
+
+
 
 
 const { listeners } = require("process");
@@ -33,8 +34,8 @@ app.get("/event", (req, res) => {
   res.render("event");
 });
 
-app.get("/home", (req, res) => {
-  res.render("home");
+app.get("/index", (req, res) => {
+  res.render("index");
 });
 
 app.post("/empdata", async (req, res) => {

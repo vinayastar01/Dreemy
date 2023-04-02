@@ -27,5 +27,5 @@ const empSchema = new mongoose.Schema({
 });
 const empCollection = new mongoose.model('empcollection',empSchema);
  module.exports = empCollection;
- const event = new mongoose.model('event',empSchema);
- module.exports = event;
+
+ 

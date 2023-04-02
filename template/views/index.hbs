@@ -23,6 +23,7 @@
   <input type="radio" id="register1" name="register" value="Register as a Company">
   <label for="css">Register as a Company</label><br>
 
+
    
      <button onClick="myonClickFn()">Submit</button>
      <script>
@@ -40,11 +41,13 @@
             
             }
         });
+        
         document.getElementById("msg").innerHTML="Please select one option";
         {{!-- setTimeout(20000);
         document.getElementById("msg").innerHTML=""; --}}
       }
      </script>
+     <p>Already have an account? <a href="/login">Login</a></p>
    
   
 

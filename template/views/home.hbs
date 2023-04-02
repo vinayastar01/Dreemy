@@ -11,8 +11,8 @@
 
     margin:0;
     padding:0;
-    border:2px solid rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
+    /*-- border:2px solid rgb(255, 255, 255); */
+    background-color:black;
     margin:auto;
     /* padding:15px; */
     display:flex;
@@ -23,7 +23,7 @@
     /* border: 2px solid red; */
     padding-block: 20px;
     display: inline-block;
-    width:120px;
+    width:20%;
     padding-left: 20px;
     text-align: center;
     color:rgb(21, 255, 0);
@@ -37,11 +37,10 @@
     color:rgb(255, 255, 255) ;
  }
 .navbox{
-    /* border:2px solid burlywood; */
     margin:0px;
     padding-block: 20px;
     display: inline-block;
-     width:600px;
+     width:80%;
      position: absolute;  
      right: 20px; 
      /* display: inline-block;
@@ -68,15 +67,18 @@
 .v1{
     display:inline-block;
     position:absolute;
-    right:30px;
+    width:20%;
+  right: 30px;
+   color:white;
     padding:5px;
     font-size: 1.5vmax;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
 .v1>a{
-    color:white;
+    color:rgb(17, 75, 235);
     padding:10px;
+     margin-right: 10%; 
     font-size: larger;
     font-weight: 400;
     text-decoration: none;
@@ -265,9 +267,10 @@ ul{
         <a href=""> SPONSORS </a>
         <a href=""> CONNECTION </a>
         <a href="">ABOUT</a>
+        
     <div class="v1">
         <a href="/login"> Login </a>
-        <a href="/registration1"> Sign up </a>
+        <a href="/index"> Sign up </a>
     </div>
     </div>
 
@@ -280,22 +283,13 @@ ul{
             <br></br>
             <button>Explore Now →</button>
            <br></br>
-      <button onClick="myonClickFn()">Register your Event!</button>
+      <button onClick="onClickFn()">Register your Event!</button>
       <script>
-      function myonClickFn(){
-        var ele = document.getElementsByName('event');
-          
-        ele.forEach(function (e)  {
-            
-           
-            document.location.href"event";
-            
-            
-            
-        });
-       
-      }
+      function onClickFn(){
+            document.location.href="event";    
+        };
      </script>
+    
    
 
         </div>
